@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="dark-mod">
+    <div class="container p-5 text-center shadow-cards position-absolute top-50 start-50 translate-middle">
+      <h1 class="mb-4">Smart Login System</h1>
+      <form>
+        <div class="mb-3 Email">
+          <input type="email" placeholder="Enter your email" autocomplete="off" class="form-control bg-transparent text-light" id="email" aria-describedby="emailHelp">
+        <div class="valid-feedback text-start">
+          Email Valid !
+        </div>
+        <div class="invalid-feedback text-start">
+          Email Invalid !
+        </div>
+        </div>
+        <div class="mb-3 password">
+          <input type="password" placeholder="Enter your password" class="form-control bg-transparent text-light" id="password">
+        <div class="valid-feedback text-start">
+          Password Valid !
+        </div>
+        <div class="invalid-feedback text-start">
+          Password Invalid !
+        </div>
+        </div>
+        <button type="button" id="login" class="btn btn-outline w-100 mb-4 rounded-pill">Login</button>
+        <p class="text-white">Don’t have an account? <a class="text-white fw-bold text-decoration-none" href="signup.html" target="_self">Sign Up</a></p>
+      </form>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>
