@@ -94,6 +94,8 @@ function checkData(){
     window.open("home.html", "_self");
     localStorage.setItem("userName", JSON.stringify(user[0]));
   }
+  } else {
+    document.querySelector("#submit #login").classList.add("is-invalid")
   }
 }
 emailInput.focus()
