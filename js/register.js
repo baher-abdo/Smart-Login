@@ -30,25 +30,31 @@ function setData() {
     testEmail()
   }
 }
-
 signUp.addEventListener("click", setData);
-nameInput.addEventListener("keyup", () => {
+nameInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    emailInput.focus()
+  }
   let regexName = /^[a-zA-Z]{3,12}$/g;
   let checkValue = regexName.test(nameInput.value);
   checkName = checkValue;
   validationName()
 });
 
-
-
-emailInput.addEventListener("keyup", () => {
+emailInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    passwordInput.focus()
+  }
   let regexEmail = /^([a-zA-Z0-9_.]{3,})@([a-zA-Z]{2,})[.]([a-zA-Z]{2,3})$/g;
   let checkValue = regexEmail.test(emailInput.value);
   checkEmail = checkValue;
   validationEmail()
 });
 
-passwordInput.addEventListener("keyup", () => {
+passwordInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    setData()
+  }
   let regexPassword = /^[a-zA-Z0-9]{3,}$/g;
   let checkValue = regexPassword.test(passwordInput.value);
   checkPassword = checkValue;
@@ -103,3 +109,4 @@ function testEmail() {
       } 
   }
 };
+nameInput.focus()

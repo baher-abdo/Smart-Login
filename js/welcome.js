@@ -8,7 +8,11 @@ loqOut.addEventListener("click", () => {
 })
 
 function welcomeUser() {
-    let user = JSON.parse(localStorage.getItem("userName"))
-    message.textContent = `welcome ${user}`
+    if (localStorage.getItem("userName")) {        
+        let user = JSON.parse(localStorage.getItem("userName"))
+        message.textContent = `welcome ${user}`
+    } else {
+    window.open("index.html", "_self")
+    }
 }
 welcomeUser()

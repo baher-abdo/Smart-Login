@@ -1,18 +1,25 @@
 let emailInput = document.getElementById("email");
 let passwordInput = document.getElementById("password");
 let logIn = document.getElementById("login");
+let changetheme = document.getElementById("themee")
 
 let checkEmail;
 let checkPassword;
 
-emailInput.addEventListener("keyup", () => {
+emailInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    passwordInput.focus()
+  }
   let regexEmail = /^([a-zA-Z0-9_.]{3,})@([a-zA-Z]{2,})[.]([a-zA-Z]{2,3})$/g;
   let checkValue = regexEmail.test(emailInput.value);
   checkEmail = checkValue;
   validationEmail();
 });
 
-passwordInput.addEventListener("keyup", () => {
+passwordInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    checkData()
+  }
   let regexPassword = /^[a-zA-Z0-9]{3,}$/g;
   let checkValue = regexPassword.test(passwordInput.value);
   checkPassword = checkValue;
@@ -43,7 +50,8 @@ function validationPass() {
 }
 
 let user = [];
-logIn.addEventListener("click", () => {
+logIn.addEventListener("click", checkData );
+function checkData(){
   if (localStorage.getItem("myData")) {
     let baher = JSON.parse(localStorage.getItem("myData"));
     let at = baher.filter((e) => {
@@ -82,12 +90,11 @@ logIn.addEventListener("click", () => {
       document.querySelector(".password .invalid-feedback").textContent =
         "Password Invalid !";
     }
-    LogIn();
-  }
-});
-function LogIn() {
   if (checkEmail && checkPassword) {
     window.open("home.html", "_self");
     localStorage.setItem("userName", JSON.stringify(user[0]));
   }
+  }
 }
+emailInput.focus()
+

@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
     <script src="js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="dark-mod">
+    <div class="change-theme bg-body-tertiary bg-opacity-25 shadow position-absolute bottom-0 start-0 m-3">
+      <i class="fa-solid fa-brush fs-3"></i>
+      <div class="box me-5">
+        <div class="colors text-center">
+          <span><i class="fa-solid fa-square-full mx-1 fs-5 main active" data-second="#f97300" data-main="#202020" style="color: #202020;border: 2px solid #f97300;"></i></span>
+          <span><i class="fa-solid fa-square-full mx-1 fs-5 main" data-second="#17a2b8" data-main="#272750" style="color: #272750;border: 2px solid #17a2b8;"></i></span>
+          <span><i class="fa-solid fa-square-full mx-1 fs-5 main" data-second="#00ffa6" data-main="#092635" style="color: #092635;border: 2px solid #00ffa6;"></i></span>
+        </div>
+      </div>
+    </div>
     <div class="container p-5 text-center shadow-cards position-absolute top-50 start-50 translate-middle">
       <h1 class="mb-4">Smart Login System</h1>
       <form>
@@ -36,5 +47,6 @@
       </form>
     </div>
     <script src="js/login.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
@@ -14,10 +15,20 @@
       <div class="container">
         <a class="navbar-brand text-light" href="#">SMART LOGIN</a>
         <button id="logout" class="btn btn-outline-warning text-light">
-          Logout
+          Logout <i class="ps-2 fa-solid fa-arrow-right-from-bracket"></i>
         </button>
       </div>
     </nav>
+    <div class="change-theme bg-body-tertiary bg-opacity-25 shadow position-absolute bottom-0 start-0 m-3">
+      <i class="fa-solid fa-brush fs-3"></i>
+      <div class="box me-5">
+        <div class="colors text-center">
+          <span><i class="fa-solid fa-square-full mx-1 fs-5 main active" data-second="#f97300" data-main="#202020" style="color: #202020;border: 2px solid #f97300;"></i></span>
+          <span><i class="fa-solid fa-square-full mx-1 fs-5 main" data-second="#17a2b8" data-main="#272750" style="color: #272750;border: 2px solid #17a2b8;"></i></span>
+          <span><i class="fa-solid fa-square-full mx-1 fs-5 main" data-second="#00ffa6" data-main="#092635" style="color: #092635;border: 2px solid #00ffa6;"></i></span>
+        </div>
+      </div>
+    </div>
     <div class="container">
         <div class="welcome d-flex align-items-center justify-content-center vh-100 ">
           <div class="card dark-mod mb-3 shadow-cards py-5">
@@ -28,5 +39,6 @@
         </div>      
     </div>
     <script src="js/welcome.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>

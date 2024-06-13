@@ -1,11 +1,9 @@
 :root {
   --main-color: #202020;
-  --secon-color: #f97300;
-  /* --main-color:#272750;
-    --secon-color:#17a2b8; */
+  --second-color: #f97300;
 }
-::selection{
-    background-color: #00224D;
+::selection {
+  background-color: #00224d;
 }
 .shadow-cards {
   box-shadow: 0px 0px 22px 7px rgba(0, 0, 0, 0.35);
@@ -13,7 +11,7 @@
 
 .dark-mod {
   background-color: var(--main-color);
-  color: var(--secon-color);
+  color: var(--second-color);
 }
 form .form-control::placeholder {
   color: #fff;
@@ -21,19 +19,63 @@ form .form-control::placeholder {
 
 form .form-control:focus {
   box-shadow: none;
-  border-color: var(--secon-color);
+  border-color: var(--second-color);
 }
 
 form .btn {
-  color: var(--secon-color);
-  border-color: var(--secon-color);
+  color: var(--second-color);
+  border-color: var(--second-color);
 }
 form .btn:hover {
-  border-color: var(--secon-color);
-  background-color: var(--secon-color);
+  border-color: var(--second-color);
+  background-color: var(--second-color);
   color: #fff;
 }
 form p a:hover {
   text-decoration: underline !important;
   cursor: pointer;
+}
+#logout {
+  border-color: var(--second-color);
+  border-radius: 0 15px 0 15px;
+}
+#logout:hover {
+  background-color: var(--second-color);
+}
+
+.box .colors i {
+  transition: 0.4s;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.box .colors i:hover,
+.box .colors .active {
+  opacity: 1;
+  box-shadow: 0px 2px 2px 0.5px rgba(0, 0, 0, 0.50);
+}
+
+
+.change-theme{
+  width: fit-content;
+  padding: 8px;
+  display: flex;
+  overflow: hidden;
+  width: 40px;
+  position: relative;
+  transition: width 1s;
+  border-radius: 0 15px 0 15px;
+}
+.change-theme i{
+  cursor: pointer;
+}
+.change-theme .box{
+  margin-left: -10px;
+  top: 10px;
+  text-align: center;
+  position: absolute;
+  left: 50px;
+  width: 110px;
+}
+.change-theme:hover{
+width: 160px;
 }
