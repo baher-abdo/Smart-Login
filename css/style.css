@@ -76,6 +76,12 @@ form p a:hover {
   left: 50px;
   width: 110px;
 }
+.change-theme .fa-brush{
+  transition: all 1s;
+}
+.change-theme:hover .fa-brush{
+  transform: rotate(90deg);
+}
 .change-theme:hover{
 width: 160px;
 }
