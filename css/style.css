@@ -46,7 +46,7 @@ form p a:hover {
 .box .colors i {
   transition: 0.4s;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .box .colors i:hover,
 .box .colors .active {
@@ -62,7 +62,7 @@ form p a:hover {
   overflow: hidden;
   width: 40px;
   position: relative;
-  transition: width 1s;
+  transition: width 0.6s;
   border-radius: 0 15px 0 15px;
 }
 .change-theme i{
@@ -76,12 +76,7 @@ form p a:hover {
   left: 50px;
   width: 110px;
 }
-.change-theme .fa-brush{
-  transition: all 1s;
-}
-.change-theme:hover .fa-brush{
-  transform: rotate(90deg);
-}
+
 .change-theme:hover{
 width: 160px;
 }
